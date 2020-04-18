@@ -9,7 +9,7 @@ class PageComments extends Component {
   onInputChange = (input) => (event) => {
     this.setState(
       {
-        input: event.target.value,
+        [input]: event.target.value,
       },
       () => {
         console.log(this.state);
@@ -18,7 +18,7 @@ class PageComments extends Component {
   };
 
   onNextClick = (event) => {
-    this.props.dispatch({ type: "SET_COMMENTS", payload: this.state });
+    this.props.dispatch({ type: "SET_COMMENTS", payload: this.state.comments });
     this.props.history.push("/review");
   };
   render() {

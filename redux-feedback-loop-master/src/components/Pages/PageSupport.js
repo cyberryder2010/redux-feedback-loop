@@ -9,7 +9,7 @@ class PageSupport extends Component {
   onInputChange = (input) => (event) => {
     this.setState(
       {
-        input: event.target.value,
+        [input]: event.target.value,
       },
       () => {
         console.log(this.state);
@@ -18,7 +18,7 @@ class PageSupport extends Component {
   };
 
   onNextClick = (event) => {
-    this.props.dispatch({ type: "SET_SUPPORT", payload: this.state });
+    this.props.dispatch({ type: "SET_SUPPORT", payload: this.state.support });
     this.props.history.push("/comments");
   };
   render() {

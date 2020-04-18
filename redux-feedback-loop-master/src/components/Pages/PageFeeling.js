@@ -9,7 +9,7 @@ class PageFeeling extends Component {
   onInputChange = (input) => (event) => {
     this.setState(
       {
-        input: event.target.value,
+        [input]: event.target.value,
       },
       () => {
         console.log(this.state);
@@ -18,7 +18,7 @@ class PageFeeling extends Component {
   };
 
   onNextClick = (event) => {
-    this.props.dispatch({ type: "SET_FEELING", payload: this.state });
+    this.props.dispatch({ type: "SET_FEELING", payload: this.state.feeling });
     this.props.history.push("/understanding");
   };
   render() {

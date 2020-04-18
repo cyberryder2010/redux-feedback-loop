@@ -8,7 +8,7 @@ import PageUnderstanding from "../Pages/PageUnderstanding";
 import PageSupport from "../Pages/PageSupport";
 import PageComments from "../Pages/PageComments";
 import PageReview from "../Pages/PageReview";
-
+import PageThankYou from "../Pages/PageThankYou";
 class App extends Component {
   render() {
     return (
@@ -25,6 +25,7 @@ class App extends Component {
           <Route exact path="/support" component={PageSupport} />
           <Route exact path="/comments" component={PageComments} />
           <Route exact path="/review" component={PageReview} />
+          <Route exact path="/thankyou" component={PageThankYou} />
         </Router>
       </div>
     );

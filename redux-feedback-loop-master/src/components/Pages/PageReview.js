@@ -15,7 +15,7 @@ class PageReview extends Component {
       .post("/feedback", feedback)
       .then((response) => {
         console.log(response.data);
-        this.props.history.push("/");
+        this.props.history.push("/thankyou");
       })
       .catch((err) => {
         console.warn(err);

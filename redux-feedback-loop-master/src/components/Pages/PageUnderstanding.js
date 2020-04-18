@@ -9,7 +9,7 @@ class PageUnderstanding extends Component {
   onInputChange = (input) => (event) => {
     this.setState(
       {
-        input: event.target.value,
+        [input]: event.target.value,
       },
       () => {
         console.log(this.state);
@@ -18,7 +18,10 @@ class PageUnderstanding extends Component {
   };
 
   onNextClick = (event) => {
-    this.props.dispatch({ type: "SET_UNDERSTANDING", payload: this.state });
+    this.props.dispatch({
+      type: "SET_UNDERSTANDING",
+      payload: this.state.understanding,
+    });
     this.props.history.push("/support");
   };
   render() {
