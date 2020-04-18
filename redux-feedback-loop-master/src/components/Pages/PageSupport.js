@@ -5,7 +5,7 @@ class PageSupport extends Component {
   render() {
     return (
       <div>
-        <h1>How well are you being supported today?></h1>
+        <h1>How well are you being supported today?</h1>
       </div>
     );
   }

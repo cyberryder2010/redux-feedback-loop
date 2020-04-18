@@ -5,7 +5,7 @@ class PageComments extends Component {
   render() {
     return (
       <div>
-        <h1>Any comments you want to share?></h1>
+        <h1>Any comments you want to share?</h1>
       </div>
     );
   }

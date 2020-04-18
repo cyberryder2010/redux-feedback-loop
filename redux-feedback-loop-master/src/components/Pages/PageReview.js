@@ -5,7 +5,7 @@ class PageReview extends Component {
   render() {
     return (
       <div>
-        <h1>Review></h1>
+        <h1>Review</h1>
       </div>
     );
   }
